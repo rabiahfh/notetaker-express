@@ -21,6 +21,25 @@ router.post('/', (req, res) => {
   fs.writeFileSync(path.join(__dirname, '../db/db.json'), JSON.stringify(notes))
   res.json(notes);
 })
+// creating delete route
+// 1 == 1 // TRUE
+// 1 == '1' // TRUE
+// 1 === '1' // FALSE
+router.delete('/:id', (req, res) => {
+  const notesID = req.params.id
+  const notesJson = fs.readFileSync(path.join(__dirname, '../db/db.json'), 'utf8');
+  const notes = JSON.parse(notesJson);
+  for (let i = 0; i < notes.length; i++) {
+    if (notes[i].id === notesID) {
+      // Remove it from the array
+      notes.splice(i, 1);
+    }
+  }
+  fs.writeFileSync(path.join(__dirname, '../db/db.json'), JSON.stringify(notes))
+  res.json("successfully deleted");
+
+
+})
 
 module.exports = router;
 
