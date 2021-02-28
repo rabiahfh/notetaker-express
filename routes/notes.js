@@ -15,7 +15,8 @@ router.post('/', (req, res) => {
   // Grab information about notes from the request
   const title = req.body.title;
   const text = req.body.text;
-  const noteObj = { title: title, text: text };
+  const randomId = Math.floor(Math.random() * 100000);
+  const noteObj = { id: randomId, title: title, text: text };
   notes.push(noteObj)
   // Save it into db.json
   fs.writeFileSync(path.join(__dirname, '../db/db.json'), JSON.stringify(notes))
@@ -30,7 +31,7 @@ router.delete('/:id', (req, res) => {
   const notesJson = fs.readFileSync(path.join(__dirname, '../db/db.json'), 'utf8');
   const notes = JSON.parse(notesJson);
   for (let i = 0; i < notes.length; i++) {
-    if (notes[i].id === notesID) {
+    if (notes[i].id == notesID) {
       // Remove it from the array
       notes.splice(i, 1);
     }
