@@ -7,12 +7,11 @@ app.use(express.urlencoded({
         true
 }));
 app.use(express.json());
-app.get("/", (req, res) => {
-    res.end("server works")
+app.use(express.static('public'));
+
+app.get("/notes", (req, res) => {
+    res.sendFile(path.join(__dirname, 'public/notes.html'));
 })
-// app.get("*", (req, res) => {
-//     res.end("This is rabiah's project")
-// })
 
 // Every other route that isnt defined above will give us the index.html page
 app.get('*', (req, res) => {
