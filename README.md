@@ -25,7 +25,7 @@ I built this app for users that need to keep track of a lot of information, it's
 
 
 
-<br>![photo of my assignment](NTpic1rev.png)
+<br>![photo of my assignment](NTpic1rev.PNG)
 
 
  ## Installation
