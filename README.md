@@ -58,10 +58,10 @@ With this app a user is able to write and save notes, to delete notes they've wr
   
  ![Demo](NTdemo.gif) 
 * To save a note click floppy disk icon in upper right
-<br>  ![save](NTsavepic.png)
+<br>  ![save](NTsavepic.PNG)
 
  * To delete a note click trash can icon next to the saved note 
- <br>  ![delete](NTdeletepic.png)
+ <br>  ![delete](NTdeletepic.PNG)
 
  ## License
  To view the license click [here](https://choosealicense.com/licenses/mit/)
