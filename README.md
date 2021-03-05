@@ -57,10 +57,11 @@ With this app a user is able to write and save notes, to delete notes they've wr
   * DELETE `/api/notes/:id` - To receive a query parameter containing the id of a note to delete. 
   
  ![Demo](NTdemo.gif) 
-* To save a note click floppy disk icon in upper right ![save](NTsavepic.png)
+* To save a note click floppy disk icon in upper right
+<br>  ![save](NTsavepic.png)
 
  * To delete a note click trash can icon next to the saved note 
-  ![save](NTdeletepic.png)
+ <br>  ![delete](NTdeletepic.png)
 
  ## License
  To view the license click [here](https://choosealicense.com/licenses/mit/)
